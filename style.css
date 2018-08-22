@@ -1,0 +1,679 @@
+/* Abraham_Aldana */
+/* style.css */
+
+@font-face {
+    font-family: 'Questrial', sans-serif;
+}
+html, body {
+    font: 20px 'Questrial', sans-serif;
+    line-height: 1.8;
+    color: #000;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #111;
+    /* overflow-y: scroll; */
+    -webkit-overflow-scrolling: touch;
+}
+
+/***********************************************/
+/***********************************************/
+
+/* Navbar */
+
+.navbar {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: transparent;
+    height: 7.5vh;
+    opacity: 0.99;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    -webkit-transition: all 0.45s ease-out;
+    -moz-transition: all 0.45s ease-out;
+    -o-transition: all 0.45s ease-out;
+    -ms-transition: all 0.45s ease-out;
+    transition: all 0.45s ease-out;
+}
+
+/* navbar links */
+
+a {
+    color: #FFF !important;
+    letter-spacing: 0.15em;
+    font-size: 20px;
+}
+a:hover {
+    color: #FAB702 !important;
+    transition: 0.15s;
+    color: #FAB702 !important;
+}
+a.active {
+    color: #FAB702 !important;
+}
+
+/* social media links */
+
+a img.hover {
+    display: none;
+}
+a img.default {
+    display: inherit;
+}
+a:hover img.hover {
+    display: inherit;
+}
+a:hover img.default {
+    display: none;
+}
+.twitter {
+    width: 40px;
+    height: 40px;
+}
+.instagram {
+    width: 40px;
+    height: 40px;
+}
+.snapchat {
+    width: 40px;
+    height: 40px;
+}
+.login_img {
+    width: 33px;
+    height: 33px;
+    margin-top: 3px;
+}
+
+/* sidenav */
+
+.sidenav {
+    height: 100%;
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    text-align: center;
+    background-color: #000;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.sidenav a {
+    margin: 38px 0px 0px 12px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: inline-block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #FAB702;
+}
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    margin-top: 19px;
+    right: 20px;
+    font-size: 20px;
+    margin-right: 17px;
+}
+/* On smaller screens, where height is less than 450px, change the sidenav */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* hamburger menu button */
+
+.menu {
+	display: block;
+	width: 36px;
+	height: 30px;
+	margin: 1em;
+}
+.menu span {
+	margin: 0 auto;
+	position: relative;
+	top: 12px;
+}
+.menu span:before, .menu span:after {
+	position: absolute;
+	content: '';
+}
+.menu span, .menu span:before, .menu span:after {
+	width: 30px;
+	height: 6px;
+	background-color: #fff;
+	display: block;
+}
+.menu span:before {
+	margin-top: -12px;
+}
+.menu span:after {
+	margin-top: 12px;
+}
+
+/* sidenav X button */
+
+.example5 span {
+	-webkit-transition-duration: 0s; transition-duration: 0s;
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.example5.open span {
+	background-color: rgba(0,0,0,0.0);
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.example5 span:before {
+	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+}
+.example5.open span:before {
+	margin-top: 0;
+  background-color: #FAB702;
+	-webkit-transform: rotate(45deg); transform: rotate(45deg);
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+}
+.example5 span:after {
+
+	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+}
+.example5.open span:after {
+	margin-top: 0;
+  background-color: #FAB702;
+	-webkit-transform: rotate(-45deg); transform: rotate(-45deg);
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+}
+
+/***********************************************/
+/***********************************************/
+
+/* Home Page */
+
+.parallax {
+    background-image: url("./images/bg.jpg");
+    /* Set a specific height */
+    width: 100%;
+    height: 100vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top:50px;
+}
+
+#intro {
+  color: white;
+  font-size: 3em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding-top: 20vh;
+}
+#intro1{
+  color: white;
+  font-size: 3em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.8em;
+}
+#intro2 {
+  color: white;
+  display: inline-block;
+  font-size: 3em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+#intro3 {
+  color: #FAB702;
+  font-size: 3em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  padding-left: 7px;
+}
+
+/*************/
+/* About Me */
+
+.parallax2 {
+    height: 100vh;
+    padding-top:50px;
+    background-color: #EFEFF4;"
+}
+
+.AboutTitle {
+    font-size: 3em;
+    text-align: center;
+    /* margin-left: 20%;
+    margin-top: 2vh; */
+}
+.AboutHR {
+    width: 14%;
+    /* margin-left: 20%; */
+    height: 0.5vh;
+    background-color: #FAB702;
+    /* margin-top: 1vh; */
+}
+.parallax3 {
+    height: 100vh;
+    padding-top:50px;
+    background-color: #FFF;"
+}
+
+/***********************************************/
+/***********************************************/
+
+/* Portfolio Page */
+
+.parallaxPortfolio {
+    background-image: url("./images/bg_portfolio2.jpg");
+    /* Set a specific height */
+    width: 100%;
+    height: 50vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top:50px;
+}
+
+.PortfolioTitle {
+    font-size: 3.8em;
+    text-align: center;
+    margin-top: 12vh;
+    color: #FFF;
+}
+.PortfolioHR {
+    width: 20%;
+    text-align: center;
+    height: 0.5vh;
+    background-color: #FAB702;
+    margin-top: 1vh;
+}
+
+/*************/
+/* Content */
+.contentPortfolio {
+    background-color: #EFEFF4;
+    height: 100vh;
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+}
+
+.projectThumbLeft {
+    width: 35vw;
+    height: auto;
+    margin-left: -100px;
+    /* padding-right: 25%; */
+    /* margin-top: 10vh; */
+}
+.projectThumbRight {
+    width: 35vw;
+    height: auto;
+
+    /* padding-left: 0px; */
+    /* margin-top: 10vh; */
+}
+.descriptionLeft {
+    text-align: left;
+    padding-left: 70px;
+    font-size: 1.5em;
+    /* margin-top: 10vh; */
+}
+.descriptionRight {
+    text-align: center;
+    padding-left: 70px;
+    font-size: 1.5em;
+    /* margin-top: 10vh; */
+}
+.visitSiteLink {
+    font-size: 0.65em;
+    color: #000 !important;
+    text-align: inherit;
+    padding-left: 50px;
+}
+.visitSiteLink:hover {
+    color: #FAB702 !important;
+    text-decoration: none;
+}
+
+/***********************************************/
+/***********************************************/
+
+/* Contact Page */
+
+.parallaxContact {
+    background-image: url("./images/bg_contact.jpg");
+    /* Set a specific height */
+    width: 100%;
+    height: 100vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top:50px;
+}
+
+.ContactTitle {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 13vh;
+    color: #FFF;
+}
+.ContactHR {
+    width: 15%;
+    text-align: center;
+    height: 0.5vh;
+    background-color: #FAB702;
+    margin-top: 1vh;
+}
+
+.ContactForm {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 0;
+}
+.ContactName {
+    background-color: transparent;
+    border: 0;
+    color: #FFF;
+    border-radius: 0px;
+    border-bottom: 1px solid #FAB702;
+    margin-top: 6vh;
+}
+.ContactName:focus {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: #FAB702;
+    border-radius: 0px;
+    border-bottom: 1px solid #FAB702;
+    box-shadow: none;
+}
+.ContactEmail {
+    background-color: transparent;
+    border: 0;
+    color: #FFF;
+    border-radius: 0px;
+    border-bottom: 1px solid #FAB702;
+    margin-top: 7.5vh;
+}
+.ContactEmail:focus {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: #FAB702;
+    border-radius: 0px;
+    border-bottom: 1px solid #FAB702;
+    box-shadow: none;
+}
+.ContactMessage {
+    background-color: transparent;
+    border: 0;
+    color: #FFF;
+    border-radius: 0px;
+    border-bottom: 1px solid #FAB702;
+    margin-top: 7.5vh;
+}
+.ContactMessage:focus {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: #FAB702;
+    border-radius: 0px;
+    border-bottom: 1px solid #FAB702;
+    box-shadow: none;
+}
+.ContactButton {
+    background-color: transparent;
+    border: 0;
+    margin-top: 9.5vh;
+}
+.ContactButton:hover {
+    background-color: transparent;
+    color: #FAB702;
+}
+
+::-webkit-input-placeholder {
+    color: #FFF !important;
+}
+::-moz-placeholder {
+    color: #FFF !important;
+}
+::-ms-placeholder {
+    color: #FFF !important;
+}
+::placeholder {
+    color: #FFF !important;
+}
+
+/***********************************************/
+/***********************************************/
+
+/* Footer */
+
+footer{
+    background-color: #111;
+    height: 7vh;
+    color: #8E8E93;
+    font-size: 14px;
+}
+.copyright {
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    margin-top: 3.5vh;
+}
+.footerSocial {
+    text-align: right;
+    vertical-align: middle;
+}
+.foot_twitter {
+    width: 28px;
+    height: 28px;
+}
+.foot_instagram {
+    width: 28px;
+    height: 28px;
+}
+.foot_snapchat {
+    width: 28px;
+    height: 28px;
+}
+
+/***********************************************/
+/***********************************************/
+
+/* slide animation */
+
+.slideanim {
+        visibility: hidden;
+    }
+
+    .slide {
+        /* The name of the animation */
+        animation-name: slide;
+        -webkit-animation-name: slide;
+        /* The duration of the animation */
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        /* Make the element visible */
+        visibility: visible;
+    }
+    /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+
+    @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+    @-webkit-keyframes slide {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+        }
+    }
+
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+
+/*  ##Device = Desktops
+    ##Screen = 1281px to higher resolution desktops     */
+    @media (min-width: 1281px) {
+
+      //CSS
+
+    }
+
+/*  ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px     */
+    @media (min-width: 1025px) and (max-width: 1280px) {
+
+
+
+    }
+
+/*  ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px      */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .logo {
+            font-size: 21px;
+        }
+        a {
+            color: #FFF !important;
+            letter-spacing: 0.15em;
+            font-size: 16px;
+        }
+        .twitter {
+            width: 30px;
+            height: 30px;
+            margin:-5px;
+        }
+        .instagram {
+            width: 30px;
+            height: 30px;
+            margin:-5px;
+        }
+        .snapchat {
+            width: 30px;
+            height: 30px;
+            margin:-5px;
+        }
+        .login_img {
+            width: 25px;
+            height: 25px;
+            margin:-5px;
+        }
+    }
+
+/*  ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px      */
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+
+    }
+
+/*  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px       */
+    @media (min-width: 481px) and (max-width: 767px) {
+        nav {
+            font-size: 16px;
+            height: 7vh;
+        }
+        .logo {
+            font-size: 25px;
+        }
+        .parallax {
+            height: 105vh;
+            padding-top:40px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        #intro {
+            font-size: 1.7em;
+            padding-top: 25vh;
+        }
+        #intro1 {
+            font-size: 1.7em;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        #intro2 {
+            font-size: 1.7em;
+        }
+        #intro3 {
+            font-size: 1.7em;
+            display: block;
+            padding-top: 10px;
+        }
+        .menu {
+            width: 36px;
+            height: 30px;
+            outline: none;
+        }
+    }
+
+/*  ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px     */
+    @media (min-width: 320px) and (max-width: 480px) {
+        nav {
+            font-size: 16px;
+            height: 7vh;
+        }
+        .logo {
+            font-size: 21px;
+        }
+        .parallax {
+            background-image: url("./images/bg_mobile.jpg");
+            height: 105vh;
+            padding-top:40px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-attachment: scroll;
+        }
+        #intro {
+            font-size: 1.7em;
+            padding-top: 20vh;
+        }
+        #intro1 {
+            font-size: 1.7em;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        #intro2 {
+            font-size: 1.7em;
+        }
+        #intro3 {
+            font-size: 1.7em;
+            display: block;
+            padding-left: 7px;
+        }
+        .menu {
+          	width: 0px;
+          	height: 20px;
+            margin-top: 10px;
+            padding-right: -20px; */
+        }
+    }
